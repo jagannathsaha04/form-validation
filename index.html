@@ -1,11 +1,11 @@
+<!-- index.html -->
+<!DOCTYPE html>
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validation</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <div class="container">
         <form onsubmit="return validateForm()">
@@ -13,29 +13,41 @@
 
             <div class="input-group">
                 <label>Full Name</label>
-                <input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validateName()">
-                <span id="name-error"></span>
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validateName()">
+                    <span class="success-icon" id="name-success"></span>
+                </div>
+                <span class="error-message" id="name-error"></span>
             </div>
 
             <div class="input-group">
                 <label>Phone No.</label>
                 <div class="phone-input-container">
                     <div class="phone-prefix">+91</div>
-                    <input type="tel" placeholder="Enter phone number" id="contact-phone" onkeyup="validatePhone()">
+                    <div class="input-wrapper">
+                        <input type="tel" placeholder="Enter phone number" id="contact-phone" onkeyup="validatePhone()">
+                        <span class="success-icon" id="phone-success"></span>
+                    </div>
                 </div>
-                <span id="phone-error"></span>
+                <span class="error-message" id="phone-error"></span>
             </div>
 
             <div class="input-group">
                 <label>Email Id</label>
-                <input type="email" placeholder="Enter email" onkeyup="validateEmail()">
-                <span id="email-error"></span>
+                <div class="input-wrapper">
+                    <input type="email" placeholder="Enter email" onkeyup="validateEmail()">
+                    <span class="success-icon" id="email-success"></span>
+                </div>
+                <span class="error-message" id="email-error"></span>
             </div>
 
             <div class="input-group">
                 <label>Feedback</label>
-                <textarea rows="5" placeholder="Enter your feedback" onkeyup="validateFeedback()"></textarea>
-                <span id="feedback-error"></span>
+                <div class="input-wrapper">
+                    <textarea rows="5" placeholder="Enter your feedback" onkeyup="validateFeedback()"></textarea>
+                    <span class="success-icon" id="feedback-success"></span>
+                </div>
+                <span class="error-message" id="feedback-error"></span>
             </div>
 
             <button type="submit">Submit</button>
@@ -43,12 +55,11 @@
         </form>
 
         <div class="useful-links">
-            <a href="#">Watch this!</a>
-            <a href="#">Visit Channel</a>
+            <a href="https://youtu.be/vgpH9go537Q?si=ZGVKs5SimN2JYbLX">Watch this!</a>
+            <a href="https://www.youtube.com/channel/UCV9Mdim99sdyd56EqKJ52fg">Visit Channel</a>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
-
 </html>
